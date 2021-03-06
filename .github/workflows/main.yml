@@ -14,14 +14,19 @@ jobs:
           if ! [[ -d "docs/json" ]]; then
             mkdir -p docs/json
           fi
-      - id: check_and_create_file
-        name: Check and Create File
+      - id: check_and_create_md5
+        name: Check and Create MD5
         if: steps.check_and_create_directories.conclusion == 'success'
         run: |
-          touch docs/json/test.file
+          workflow_init_template='{\n\t"schemaVersion": 1,\n\t"color": "00aedb",\n\t"label": "Workflow Start",\n\t"message": "PLACEHOLDER",\n\t"labelColor": "1d1d1d",\n\t"style": "for-the-badge",\n\t"namedLogo": "linux"\n}'
+          if ! [[ -f "docs/json/workflow_init_md5.json" ]]; then
+            touch docs/json/workflow_init_md5.json
+          fi
+          echo -e "$workflow_init_md5_text" > docs/json/workflow_init_md5.json
+          sed -i "s/\"message\": \".*\"/\"message\": \"$(date)\"/g" docs/json/workflow_init_md5.json
       - id: check_and_commit
         name: Commit Changes
-        # if: steps.check_and_create_file.conclusion == 'success'
+        if: steps.check_and_create_md5.conclusion == 'success'
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Completed Main Workflow
