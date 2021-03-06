@@ -14,12 +14,12 @@ jobs:
           if ! [[ -d "docs/json" ]]; then
             mkdir -p docs/json
           fi
-        - if: steps.check_and_create_directories.conclusion == 'success'
-          - id: check_and_create_file
-            name: Check and Create File
-            run: |
-              touch docs/json/test.file
-          - if: steps.check_and_create_file.conclusion == 'success'
-            uses: stefanzweifel/git-auto-commit-action@v4
-            with:
-              commit_message: Completed Main Workflow
+      - if: steps.check_and_create_directories.conclusion == 'success'
+        - id: check_and_create_file
+          name: Check and Create File
+          run: |
+            touch docs/json/test.file
+        - if: steps.check_and_create_file.conclusion == 'success'
+          uses: stefanzweifel/git-auto-commit-action@v4
+          with:
+            commit_message: Completed Main Workflow
