@@ -15,7 +15,7 @@ jobs:
             mkdir -p docs/json
           fi
       - id: check_and_create_file
-        name: Check and Create File
+        # name: Check and Create File
         if: steps.check_and_create_directories.conclusion == 'success'
         run: |
           touch docs/json/test.file
