@@ -1,0 +1,25 @@
+name: Main Workflow
+on:
+  push:
+    branches: [ master ]
+jobs:
+  main_workflow:
+    name: Main Workflow
+    runs-on: ubuntu-latest
+    steps:
+      - id: check_and_create_directories
+        uses: actions/checkout@v2
+        name: Check and Create Directories
+        run: |
+          if ! [[ -d "docs/json" ]]; then
+            mkdir -p docs/json
+          fi
+        if: steps.check_and_create_directories.conclusion == 'success'
+        id: check_and_create_file
+        name: Check and Create File
+        run: |
+          touch docs/json/test.file
+        if: steps.check_and_create_file.conclusion == 'success'
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Completed Main Workflow
