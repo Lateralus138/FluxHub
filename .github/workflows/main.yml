@@ -7,14 +7,14 @@ jobs:
     name: Main Workflow
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - id: check_and_create_directories
-        uses: actions/checkout@v2
-        - name: Check and Create Directories
-          run: |
-            if ! [[ -d "docs/json" ]]; then
-              mkdir -p docs/json
-            fi
-          - if: steps.check_and_create_directories.conclusion == 'success'
+        name: Check and Create Directories
+        run: |
+          if ! [[ -d "docs/json" ]]; then
+            mkdir -p docs/json
+          fi
+        - if: steps.check_and_create_directories.conclusion == 'success'
           - id: check_and_create_file
             name: Check and Create File
             run: |
