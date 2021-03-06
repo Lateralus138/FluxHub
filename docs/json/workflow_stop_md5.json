@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"color": "00aedb",
-	"label": "Workflow Start",
+	"label": "Workflow Stop",
 	"message": "Sat Mar  6 20:30:12 UTC 2021",
 	"labelColor": "1d1d1d",
 	"style": "for-the-badge",
