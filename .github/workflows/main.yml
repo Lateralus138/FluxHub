@@ -19,8 +19,9 @@ jobs:
         if: steps.check_and_create_directories.conclusion == 'success'
         run: |
           touch docs/json/test.file
-        # if: steps.check_and_create_file.conclusion == 'success'
-        # name: Commit Changes
-        # uses: stefanzweifel/git-auto-commit-action@v4
-        # with:
-        #   commit_message: Completed Main Workflow
+      - id: check_and_commit
+        name: Commit Changes
+        if: steps.check_and_create_file.conclusion == 'success'
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Completed Main Workflow
