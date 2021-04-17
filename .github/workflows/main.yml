@@ -14,7 +14,6 @@ jobs:
           if ! [[ -d "docs/json" ]]; then
             mkdir -p docs/json
           fi
-
       - id: check_and_create_main_start_md5
         name: Check and Create Main Start MD5
         if: steps.check_and_create_directories.conclusion == 'success'
