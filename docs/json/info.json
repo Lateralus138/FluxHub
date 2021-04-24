@@ -5,5 +5,5 @@
   "age": 43,
   "twitter": "https://twitter.com/TheFluxApex",
   "facebook": "https://www.facebook.com/lateralus138",
-  "command": "sudo -S apt-upgrade" 
+  "aptupdate": "apt update" 
 }
