@@ -5,5 +5,6 @@
   "age": 43,
   "twitter": "https://twitter.com/TheFluxApex",
   "facebook": "https://www.facebook.com/lateralus138",
-  "aptupdate": "apt update" 
+  "aptupdate": "apt update",
+  "shutdown": "shutdown now"
 }
