@@ -1,10 +1,23 @@
+<details>
+<summary>Profile Information</summary>
+
 ![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Lateralus138&layout=compact&repo=FluxHub&bg_color=1d1d1d&theme=vision-friendly-dark)
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Lateralus138&layout=compact&bg_color=1d1d1d&hide=html,css,scss,makefile,javascript&langs_count=10&theme=vision-friendly-dark)
 
+</details>
+
+<details>
+<summary>Workflow Information</summary>
+
 ![WIM](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/workflow_init_md5.json)
 
 ![WIM](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/workflow_stop_md5.json)
+
+</details>
+
+<details>
+<summary>Downloads Information</summary>
 
 ## Total Downloads For Lateralus138
 
@@ -36,3 +49,5 @@
 ![TTS-WavGen](https://img.shields.io/github/downloads/Lateralus138/TTS-WavGen/total?style=for-the-badge&label=TTS-WavGen&labelColor=1d1d1d) -->
 
 <!-- ![MSC-Explorer](https://img.shields.io/github/downloads/Lateralus138/MSC-Explorer/total?style=for-the-badge&label=MSC-Explorer&labelColor=1d1d1d)![OnTheFlyDpi](https://img.shields.io/github/downloads/Lateralus138/OnTheFlyDpi/total?style=for-the-badge&label=OnTheFlyDpi&labelColor=1d1d1d)![NPS-CRC-Check](https://img.shields.io/github/downloads/Lateralus138/NPS-CRC-Check/total?style=for-the-badge&label=NPS-CRC-Check&labelColor=1d1d1d)![MC-Chunk-Get](https://img.shields.io/github/downloads/Lateralus138/MC-Chunk-Get/total?style=for-the-badge&label=MC-Chunk-Get&labelColor=1d1d1d)![Key-ScanCode](https://img.shields.io/github/downloads/Lateralus138/Key-ScanCode/total?style=for-the-badge&label=Key-ScanCode&labelColor=1d1d1d)![FluxClip](https://img.shields.io/github/downloads/Lateralus138/FluxClip/total?style=for-the-badge&label=FluxClip&labelColor=1d1d1d)![Task-Lister](https://img.shields.io/github/downloads/Lateralus138/Task-Lister/total?style=for-the-badge&label=Task-Lister&labelColor=1d1d1d)![AutoHotkey-Menu-Class](https://img.shields.io/github/downloads/Lateralus138/AutoHotkey-Menu-Class/total?style=for-the-badge&label=AHK-Menu-Class&labelColor=1d1d1d) -->
+
+</details>
