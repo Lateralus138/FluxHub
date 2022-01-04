@@ -1,8 +1,8 @@
-![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Lateralus138&layout=compact&repo=FluxHub&bg_color=1d1d1d&theme=vision-friendly-dark)
+![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Lateralus138&layout=compact&repo=FluxHub&bg_color=1d1d1d&theme=vision-friendly-dark&border_radius=24)
 
-![OverallStats](https://github-readme-stats.vercel.app/api?username=Lateralus138&show_icons=true&bg_color=1d1d1d&theme=vision-friendly-dark)
+![OverallStats](https://github-readme-stats.vercel.app/api?username=Lateralus138&show_icons=true&bg_color=1d1d1d&theme=vision-friendly-dark&border_radius=24) 
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Lateralus138&layout=compact&bg_color=1d1d1d&hide=html,css,scss,makefile,javascript&langs_count=10&theme=vision-friendly-dark)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Lateralus138&layout=compact&bg_color=1d1d1d&hide=html,css,scss,makefile,javascript&langs_count=10&theme=vision-friendly-dark&border_radius=24) 
 
 ![WIM](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/workflow_init_md5.json)
 
