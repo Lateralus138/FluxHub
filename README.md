@@ -2,7 +2,9 @@
 
 ![OverallStats](https://github-readme-stats.vercel.app/api?username=Lateralus138&show_icons=true&bg_color=1d1d1d&theme=vision-friendly-dark&border_radius=24&fg_color=e2d2e2)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Lateralus138&layout=compact&bg_color=1d1d1d&hide=html,css,scss,makefile,javascript&langs_count=10&theme=vision-friendly-dark&border_radius=24&fg_color=e2d2e2) 
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Lateralus138&layout=compact&bg_color=1d1d1d&hide=html,css,scss,makefile,javascript&langs_count=10&theme=vision-friendly-dark&border_radius=24&fg_color=e2d2e2)
+
+![Wakatime](https://github-readme-stats.vercel.app/api/wakatime?username=Lateralus138&border_radius=24&theme=vision-friendly-dark&fg_color=e2d2e2&bg_color=1d1d1d)
 
 ![WIM](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/workflow_init_md5.json)
 
