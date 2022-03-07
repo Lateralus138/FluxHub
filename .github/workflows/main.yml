@@ -45,7 +45,7 @@ jobs:
             touch docs/json/current_shell.json
           fi
           echo -e "$workflow_init_template" > docs/json/current_shell.json
-          v=BASH
+          v="$0"
           sed -i "s/\"label\": \".*\"/\"label\": \"Current Shell\"/g" docs/json/current_shell.json
           sed -i "s/\"message\": \".*\"/\"message\": \"$v\"/g" docs/json/current_shell.json
       - id: check_and_commit
