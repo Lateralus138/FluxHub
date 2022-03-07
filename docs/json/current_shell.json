@@ -2,7 +2,7 @@
 	"schemaVersion": 1,
 	"color": "00aedb",
 	"label": "Current Shell",
-	"message": "$P",
+	"message": "PATH",
 	"labelColor": "1d1d1d",
 	"style": "for-the-badge",
 	"namedLogo": "github"
