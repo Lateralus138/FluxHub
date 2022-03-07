@@ -34,8 +34,19 @@ jobs:
             touch docs/json/workflow_stop_md5.json
           fi
           echo -e "$workflow_init_template" > docs/json/workflow_stop_md5.json
-          sed -i "s/\"label\": \".*\"/\"label\": \"Workflow Stop\"/g" docs/json/workflow_stop_md5.json
+          sed -i "s/\"label\": \".*\"/\"label\": \"Workflow Stop \"/g" docs/json/workflow_stop_md5.json
           sed -i "s/\"message\": \".*\"/\"message\": \"$(date)\"/g" docs/json/workflow_stop_md5.json
+      - id: check_current_shell
+        name: Check Current Shell
+        if: steps.check_and_create_main_stop_md5.conclusion == 'success'
+        run: |
+          workflow_init_template='{\n\t"schemaVersion": 1,\n\t"color": "00aedb",\n\t"label": "PLACEHOLDER",\n\t"message": "PLACEHOLDER",\n\t"labelColor": "1d1d1d",\n\t"style": "for-the-badge",\n\t"namedLogo": "github"\n}'
+          if ! [[ -f "docs/json/current_shell.json" ]]; then
+            touch docs/json/current_shell.json
+          fi
+          echo -e "$workflow_init_template" > docs/json/current_shell.json
+          sed -i "s/\"label\": \".*\"/\"label\": \"Current Shell\"/g" docs/json/current_shell.json
+          sed -i "s/\"message\": \".*\"/\"message\": \"$(echo $0)\"/g" docs/json/current_shell.json
       - id: check_and_commit
         name: Commit Changes
         if: steps.check_and_create_main_stop_md5.conclusion == 'success'
