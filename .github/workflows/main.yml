@@ -34,7 +34,7 @@ jobs:
             touch docs/json/current_shell.json
           fi
           rpath="$(realpath .)"
-          rpath="${rpath//\//+}"
+          rpath="${rpath//\//\\/}"
           echo -e "$workflow_init_template" > docs/json/current_shell.json
           sed -i "s/\"label\": \".*\"/\"label\": \"Current Shell\"/g" docs/json/current_shell.json
           sed -i "s/\"message\": \".*\"/\"message\": \"${rpath}\"/g" docs/json/current_shell.json
