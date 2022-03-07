@@ -18,6 +18,8 @@
 
 ![SHELL](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/current_shell.json&color=B54369&labelColor=222F38)
 
+![OSVERSION](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/os_version.json&color=B54369&labelColor=222F38)
+
 
 ## Total Downloads For Lateralus138
 
