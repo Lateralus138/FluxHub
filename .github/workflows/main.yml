@@ -47,7 +47,7 @@ jobs:
             touch docs/json/workflow_stop_md5.json
           fi
           echo -e "$workflow_init_template" > docs/json/workflow_stop_md5.json
-          sed -i "s/\"label\": \".*\"/\"label\": \"Workflow Stop \"/g" docs/json/workflow_stop_md5.json
+          sed -i "s/\"label\": \".*\"/\"label\": \"Workflow  Stop\"/g" docs/json/workflow_stop_md5.json
           sed -i "s/\"message\": \".*\"/\"message\": \"$(date)\"/g" docs/json/workflow_stop_md5.json
       - id: check_and_commit
         name: Commit Changes
