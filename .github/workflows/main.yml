@@ -33,7 +33,7 @@ jobs:
           if ! [[ -f "docs/json/current_shell.json" ]]; then
             touch docs/json/current_shell.json
           fi
-          rpath="$(realpath .)"
+          rpath="$0"
           rpath="${rpath//\//\\/}"
           echo -e "$workflow_init_template" > docs/json/current_shell.json
           sed -i "s/\"label\": \".*\"/\"label\": \"Current Shell\"/g" docs/json/current_shell.json
