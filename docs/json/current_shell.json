@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"color": "00aedb",
-	"label": "Workflow Stop ",
+	"label": "Current Shell",
 	"message": "Mon Mar  7 19:50:24 UTC 2022",
 	"labelColor": "1d1d1d",
 	"style": "for-the-badge",
