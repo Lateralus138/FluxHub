@@ -44,7 +44,7 @@ jobs:
           if ! [[ -f "docs/json/current_shell.json" ]]; then
             touch docs/json/current_shell.json
           fi
-          $P="echo $0"
+          $P="$0"
           echo -e "$workflow_init_template" > docs/json/current_shell.json
           sed -i "s/\"label\": \".*\"/\"label\": \"Current Shell\"/g" docs/json/current_shell.json
           sed -i 's/\"message\": \".*\"/\"message\": \"'"$(echo $P)"'\"/g' docs/json/current_shell.json
