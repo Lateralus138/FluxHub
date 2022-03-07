@@ -1,0 +1,9 @@
+{
+	"schemaVersion": 1,
+	"color": "00aedb",
+	"label": "OS Version",
+	"message": "Linux fv-az101-874 5.11.0-1028-azure #31~20.04.2-Ubuntu SMP Tue Jan 18 08:46:15 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux",
+	"labelColor": "1d1d1d",
+	"style": "for-the-badge",
+	"namedLogo": "github"
+}
