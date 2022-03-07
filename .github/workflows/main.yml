@@ -10,7 +10,6 @@ jobs:
       - uses: actions/checkout@v2
       - id: check_and_create_main_start_md5
         name: Check and Create Main Start MD5
-        if: steps.check_and_create_directories.conclusion == 'success'
         run: |
           workflow_init_template='{\n\t"schemaVersion": 1,\n\t"color": "00aedb",\n\t"label": "PLACEHOLDER",\n\t"message": "PLACEHOLDER",\n\t"labelColor": "1d1d1d",\n\t"style": "for-the-badge",\n\t"namedLogo": "github"\n}'
           if ! [[ -f "docs/json/workflow_init_md5.json" ]]; then
