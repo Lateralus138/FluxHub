@@ -36,7 +36,7 @@ jobs:
           rpath="$0"
           rpath="${rpath//\//\\/}"
           echo -e "$workflow_init_template" > docs/json/current_shell.json
-          sed -i "s/\"label\": \".*\"/\"label\": \"Current Shell\"/g" docs/json/current_shell.json
+          sed -i "s/\"label\": \".*\"/\"label\": \"Runner Script\"/g" docs/json/current_shell.json
           sed -i "s/\"message\": \".*\"/\"message\": \"${rpath}\"/g" docs/json/current_shell.json
       - id: check_and_create_main_stop_md5
         name: Check and Create Main Stop MD5
