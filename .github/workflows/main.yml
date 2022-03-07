@@ -46,7 +46,7 @@ jobs:
           fi
           echo -e "$workflow_init_template" > docs/json/current_shell.json
           sed -i "s/\"label\": \".*\"/\"label\": \"Current Shell\"/g" docs/json/current_shell.json
-          sed -i "s/\"message\": \".*\"/\"message\": \"$(echo hey)\"/g" docs/json/current_shell.json
+          sed -i "s/\"message\": \".*\"/\"message\": \"$(readlink /proc/$$/exe)\"/g" docs/json/current_shell.json
       - id: check_and_commit
         name: Commit Changes
         if: steps.check_and_create_main_stop_md5.conclusion == 'success'
