@@ -12,11 +12,11 @@
 
 [![WAKATIMELANGS](https://wakatime.com/share/@Lateralus138/c44cb5ba-4c21-4203-9ec9-8f3a6ff2ee7a.svg)](https://wakatime.com/share/@Lateralus138/c44cb5ba-4c21-4203-9ec9-8f3a6ff2ee7a.svg)
 
-![WIMSTART](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/workflow_init_md5.json)
+![WIMSTART](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/workflow_init_md5.json&color=B54369&labelColor=222F38)
 
-![WIMSTOP](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/workflow_stop_md5.json)
+![WIMSTOP](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/workflow_stop_md5.json&color=B54369&labelColor=222F38)
 
-![SHELL](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/current_shell.json)
+![SHELL](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/current_shell.json&color=B54369&labelColor=222F38)
 
 
 ## Total Downloads For Lateralus138
