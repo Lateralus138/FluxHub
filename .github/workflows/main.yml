@@ -64,9 +64,23 @@ jobs:
           echo -e "$workflow_init_template" > docs/json/lsb_version.json
           sed -i "s/\"label\": \".*\"/\"label\": \"Workflow Built On\"/g" docs/json/lsb_version.json
           sed -i "s/\"message\": \".*\"/\"message\": \"${rpath}\"/g" docs/json/lsb_version.json
+      - id: check_shell
+        name: Check Shell
+        if: steps.check_lsb_version.conclusion == 'success'
+        run: |
+          workflow_init_template='{\n\t"schemaVersion": 1,\n\t"color": "00aedb",\n\t"label": "PLACEHOLDER",\n\t"message": "PLACEHOLDER",\n\t"labelColor": "1d1d1d",\n\t"style": "for-the-badge",\n\t"namedLogo": "github"\n}'
+          if ! [[ -f "docs/json/shell.json" ]]; then
+            touch docs/json/shell.json
+          fi
+          rpath="$0"
+          rpath="${rpath//\//\\/}"
+          rpath="${rpath//\-/\\-}"
+          echo -e "$workflow_init_template" > docs/json/shell.json
+          sed -i "s/\"label\": \".*\"/\"label\": \"Workflow Shell\"/g" docs/json/shell.json
+          sed -i "s/\"message\": \".*\"/\"message\": \"${rpath}\"/g" docs/json/shell.json
       - id: check_and_create_main_stop_md5
         name: Check and Create Main Stop MD5
-        if: steps.check_lsb_version.conclusion == 'success'
+        if: steps.check_shell.conclusion == 'success'
         run: |
           workflow_init_template='{\n\t"schemaVersion": 1,\n\t"color": "00aedb",\n\t"label": "PLACEHOLDER",\n\t"message": "PLACEHOLDER",\n\t"labelColor": "1d1d1d",\n\t"style": "for-the-badge",\n\t"namedLogo": "github"\n}'
           if ! [[ -f "docs/json/workflow_stop_md5.json" ]]; then
