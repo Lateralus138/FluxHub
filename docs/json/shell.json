@@ -1,8 +1,8 @@
 {
 	"schemaVersion": 1,
 	"color": "00aedb",
-	"label": "Workflow  Stop",
-	"message": "Thu Mar 10 15:48:19 UTC 2022",
+	"label": "Workflow Shell",
+	"message": "/home/runner/work/_temp/ce5e3c81-f91d-4dc6-a0d2-78cea79fd0ed.sh",
 	"labelColor": "1d1d1d",
 	"style": "for-the-badge",
 	"namedLogo": "github"
