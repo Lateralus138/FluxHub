@@ -62,7 +62,7 @@ jobs:
           rpath="$(lsb_release -sd)"
           rpath="${rpath//\//\\/}"
           echo -e "$workflow_init_template" > docs/json/lsb_version.json
-          sed -i "s/\"label\": \".*\"/\"label\": \"Built On\"/g" docs/json/lsb_version.json
+          sed -i "s/\"label\": \".*\"/\"label\": \"Workflow Built On\"/g" docs/json/lsb_version.json
           sed -i "s/\"message\": \".*\"/\"message\": \"${rpath}\"/g" docs/json/lsb_version.json
       - id: check_and_create_main_stop_md5
         name: Check and Create Main Stop MD5
