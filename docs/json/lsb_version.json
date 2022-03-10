@@ -1,8 +1,8 @@
 {
 	"schemaVersion": 1,
 	"color": "00aedb",
-	"label": "Workflow  Stop",
-	"message": "Thu Mar 10 14:40:11 UTC 2022",
+	"label": "Built On",
+	"message": "Ubuntu 20.04.4 LTS",
 	"labelColor": "1d1d1d",
 	"style": "for-the-badge",
 	"namedLogo": "github"
