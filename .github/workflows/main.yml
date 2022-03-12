@@ -29,7 +29,7 @@ jobs:
         name: Check Current Shell
         if: steps.check_and_create_directories.conclusion == 'success'
         run: |
-          workflow_init_template='{\n\t"schemaVersion": 1,\n\t"color": "00aedb",\n\t"label": "PLACEHOLDER",\n\t"message": "PLACEHOLDER",\n\t"labelColor": "1d1d1d",\n\t"style": "for-the-badge",\n\t"namedLogo": "github"\n}'
+          workflow_init_template='{\n\t"schemaVersion": 1,\n\t"color": "00a300",\n\t"label": "PLACEHOLDER",\n\t"message": "PLACEHOLDER",\n\t"labelColor": "1d1d1d",\n\t"style": "for-the-badge",\n\t"namedLogo": "github"\n}'
           if ! [[ -f "docs/json/current_shell.json" ]]; then
             touch docs/json/current_shell.json
           fi
@@ -42,7 +42,7 @@ jobs:
         name: Check OS Version
         if: steps.check_current_shell.conclusion == 'success'
         run: |
-          workflow_init_template='{\n\t"schemaVersion": 1,\n\t"color": "00aedb",\n\t"label": "PLACEHOLDER",\n\t"message": "PLACEHOLDER",\n\t"labelColor": "1d1d1d",\n\t"style": "for-the-badge",\n\t"namedLogo": "github"\n}'
+          workflow_init_template='{\n\t"schemaVersion": 1,\n\t"color": "9f00a7",\n\t"label": "PLACEHOLDER",\n\t"message": "PLACEHOLDER",\n\t"labelColor": "1d1d1d",\n\t"style": "for-the-badge",\n\t"namedLogo": "github"\n}'
           if ! [[ -f "docs/json/os_version.json" ]]; then
             touch docs/json/os_version.json
           fi
@@ -55,7 +55,7 @@ jobs:
         name: Check LSB Version
         if: steps.check_os_version.conclusion == 'success'
         run: |
-          workflow_init_template='{\n\t"schemaVersion": 1,\n\t"color": "00aedb",\n\t"label": "PLACEHOLDER",\n\t"message": "PLACEHOLDER",\n\t"labelColor": "1d1d1d",\n\t"style": "for-the-badge",\n\t"namedLogo": "github"\n}'
+          workflow_init_template='{\n\t"schemaVersion": 1,\n\t"color": "e3a21a",\n\t"label": "PLACEHOLDER",\n\t"message": "PLACEHOLDER",\n\t"labelColor": "1d1d1d",\n\t"style": "for-the-badge",\n\t"namedLogo": "github"\n}'
           if ! [[ -f "docs/json/lsb_version.json" ]]; then
             touch docs/json/lsb_version.json
           fi
@@ -68,7 +68,7 @@ jobs:
         name: Check Shell
         if: steps.check_lsb_version.conclusion == 'success'
         run: |
-          workflow_init_template='{\n\t"schemaVersion": 1,\n\t"color": "00aedb",\n\t"label": "PLACEHOLDER",\n\t"message": "PLACEHOLDER",\n\t"labelColor": "1d1d1d",\n\t"style": "for-the-badge",\n\t"namedLogo": "github"\n}'
+          workflow_init_template='{\n\t"schemaVersion": 1,\n\t"color": "b91d47",\n\t"label": "PLACEHOLDER",\n\t"message": "PLACEHOLDER",\n\t"labelColor": "1d1d1d",\n\t"style": "for-the-badge",\n\t"namedLogo": "github"\n}'
           if ! [[ -f "docs/json/shell.json" ]]; then
             touch docs/json/shell.json
           fi
@@ -78,9 +78,23 @@ jobs:
           echo -e "$workflow_init_template" > docs/json/shell.json
           sed -i "s/\"label\": \".*\"/\"label\": \"Workflow Shell\"/g" docs/json/shell.json
           sed -i "s/\"message\": \".*\"/\"message\": \"${rpath}\"/g" docs/json/shell.json
+      - id: check_user
+        name: Check User
+        if: steps.check_shell.conclusion == 'success'
+        run: |
+          workflow_init_template='{\n\t"schemaVersion": 1,\n\t"color": "2b5797",\n\t"label": "PLACEHOLDER",\n\t"message": "PLACEHOLDER",\n\t"labelColor": "1d1d1d",\n\t"style": "for-the-badge",\n\t"namedLogo": "github"\n}'
+          if ! [[ -f "docs/json/user.json" ]]; then
+            touch docs/json/user.json
+          fi
+          rpath="$USER"
+          rpath="${rpath//\//\\/}"
+          rpath="${rpath//\-/\\-}"
+          echo -e "$workflow_init_template" > docs/json/user.json
+          sed -i "s/\"label\": \".*\"/\"label\": \"Workflow User\"/g" docs/json/user.json
+          sed -i "s/\"message\": \".*\"/\"message\": \"${rpath}\"/g" docs/json/user.json
       - id: check_and_create_main_stop_md5
         name: Check and Create Main Stop MD5
-        if: steps.check_shell.conclusion == 'success'
+        if: steps.check_user.conclusion == 'success'
         run: |
           workflow_init_template='{\n\t"schemaVersion": 1,\n\t"color": "00aedb",\n\t"label": "PLACEHOLDER",\n\t"message": "PLACEHOLDER",\n\t"labelColor": "1d1d1d",\n\t"style": "for-the-badge",\n\t"namedLogo": "github"\n}'
           if ! [[ -f "docs/json/workflow_stop_md5.json" ]]; then
