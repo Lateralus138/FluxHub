@@ -6,15 +6,20 @@
 
 ![WakatimeLat](https://github-readme-stats.vercel.app/api/wakatime?username=4b937ad4-c4a2-4004-9879-d85328b6d4cd&border_radius=16&theme=vision-friendly-dark&fg_color=e2d2e2&bg_color=1d1d1d)
 
+Time spent in Wakatime monitored environments:
+
 [![wakatime](https://wakatime.com/badge/user/4b937ad4-c4a2-4004-9879-d85328b6d4cd.svg?style=for-the-badge)](https://wakatime.com/@4b937ad4-c4a2-4004-9879-d85328b6d4cd)
 
-[![wk](https://wakatime.com/badge/github/Lateralus138/conpalette.svg?style=for-the-badge)](https://wakatime.com/badge/github/Lateralus138/conpalette.svg)
+
+Time spent in  this specific repository:
+
+[![wakatime](https://wakatime.com/badge/github/Lateralus138/FluxHub.svg?style=for-the-badge)](https://wakatime.com/badge/github/Lateralus138/FluxHub)
 
 [![WAKATIMEACTIVITY](https://wakatime.com/share/@Lateralus138/8e9c0c1a-ebae-4b9e-baab-c2c2333e46d2.svg)](https://wakatime.com/share/@Lateralus138/8e9c0c1a-ebae-4b9e-baab-c2c2333e46d2.svg)
 
 [![WAKATIMELANGS](https://wakatime.com/share/@Lateralus138/c44cb5ba-4c21-4203-9ec9-8f3a6ff2ee7a.svg)](https://wakatime.com/share/@Lateralus138/c44cb5ba-4c21-4203-9ec9-8f3a6ff2ee7a.svg)
 
-![WIMSTART](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/workflow_init_md5.json&color=B54369&labelColor=222F38)
+<!-- ![WIMSTART](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/workflow_init_md5.json&color=B54369&labelColor=222F38)
 
 ![WIMSTOP](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/workflow_stop_md5.json&color=B54369&labelColor=222F38)
 
@@ -24,7 +29,21 @@
 
 ![BUILTON](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/lsb_version.json&color=B54369&labelColor=222F38)
 
-![WORKFLOWSHELL](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/shell.json&color=B54369&labelColor=222F38)
+![WORKFLOWSHELL](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/shell.json&color=B54369&labelColor=222F38) -->
+
+![WIMSTART](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/workflow_init_md5.json)
+
+![WIMSTOP](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/workflow_stop_md5.json)
+
+![SHELL](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/current_shell.json)
+
+![OSVERSION](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/os_version.json)
+
+![BUILTON](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/lsb_version.json)
+
+![WORKFLOWSHELL](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/shell.json)
+
+![WORKFLOWUSER](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/user.json)
 
 ## Total Downloads For Lateralus138
 
