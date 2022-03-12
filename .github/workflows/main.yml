@@ -102,8 +102,8 @@ jobs:
             touch docs/json/temperature.json
           fi
           wget https://api.weather.gov/gridpoints/ILX/71,58/forecast/hourly -O temperature.json
-          a="$(cat temperature.json | jq -r '.properties.periods[0].temperature)"
-          b="$(cat temperature.json | jq -r '.properties.periods[0].temperatureUnit)"
+          a="$(cat temperature.json | jq -r .properties.periods[0].temperature)"
+          b="$(cat temperature.json | jq -r .properties.periods[0].temperatureUnit)"
           rm temperature.json
           rpath="${a}${b}"
           rpath="${rpath//\//\\/}"
