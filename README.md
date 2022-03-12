@@ -45,6 +45,8 @@ Time spent in  this specific repository:
 
 ![WORKFLOWUSER](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/user.json)
 
+![DECATURWEATHER](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/FluxHub/master/docs/json/temperature.json)
+
 ## Total Downloads For Lateralus138
 
 List 1

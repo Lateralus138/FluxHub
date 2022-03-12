@@ -92,9 +92,28 @@ jobs:
           echo -e "$workflow_init_template" > docs/json/user.json
           sed -i "s/\"label\": \".*\"/\"label\": \"Workflow User\"/g" docs/json/user.json
           sed -i "s/\"message\": \".*\"/\"message\": \"${rpath}\"/g" docs/json/user.json
+      - id: check_temperature
+        name: Check Temperature
+        if: steps.check_user.conclusion == 'success'
+        run: |
+          sudo apt install jq -y
+          workflow_init_template='{\n\t"schemaVersion": 1,\n\t"color": "00aba9",\n\t"label": "PLACEHOLDER",\n\t"message": "PLACEHOLDER",\n\t"labelColor": "1d1d1d",\n\t"style": "for-the-badge",\n\t"namedLogo": "github"\n}'
+          if ! [[ -f "docs/json/temperature.json" ]]; then
+            touch docs/json/temperature.json
+          fi
+          wget https://api.weather.gov/gridpoints/ILX/71,58/forecast/hourly -O temperature.json
+          a="$(cat temperature.json | jq -r '.properties.periods[0].temperature)"
+          b="$(cat temperature.json | jq -r '.properties.periods[0].temperatureUnit)"
+          rm temperature.json
+          rpath="${a}${b}"
+          rpath="${rpath//\//\\/}"
+          rpath="${rpath//\-/\\-}"
+          echo -e "$workflow_init_template" > docs/json/temperature.json
+          sed -i "s/\"label\": \".*\"/\"label\": \"Decatur, IL Temperature\"/g" docs/json/temperature.json
+          sed -i "s/\"message\": \".*\"/\"message\": \"${rpath}\"/g" docs/json/temperature.json
       - id: check_and_create_main_stop_md5
         name: Check and Create Main Stop MD5
-        if: steps.check_user.conclusion == 'success'
+        if: steps.check_temperature.conclusion == 'success'
         run: |
           workflow_init_template='{\n\t"schemaVersion": 1,\n\t"color": "00aedb",\n\t"label": "PLACEHOLDER",\n\t"message": "PLACEHOLDER",\n\t"labelColor": "1d1d1d",\n\t"style": "for-the-badge",\n\t"namedLogo": "github"\n}'
           if ! [[ -f "docs/json/workflow_stop_md5.json" ]]; then
