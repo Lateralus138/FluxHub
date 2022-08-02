@@ -134,9 +134,14 @@ jobs:
           echo "TIME_STAMP=$(date -ud @${{ env.VERSION_EPOCH }})" >> $GITHUB_ENV
           echo ${{ env.TIME_STAMP }}
           echo "VERSION_FULL=${{ env.VERSION_PROGRAM }}.${{ env.VERSION_FILE }}.${{ env.VERSION_EPOCH }}" >> $GITHUB_ENV
+      - id: set_vars
+        name: Set Variables
+        if: steps.check_and_create_main_stop_md5.conclusion == 'success'
+        run: /
+          echo "VERSION_EPOCH: [" ${{ env.VERSION_EPOCH }} "]"
       - id: check_and_commit
         name: Commit Changes
-        if: steps.check_and_create_main_stop_md5.conclusion == 'success'
+        if: steps.set_vars.conclusion == 'success'
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Completed Main Workflow - ${{ env.VERSION_FULL }} @ ${{ env.TIME_STAMP }}
