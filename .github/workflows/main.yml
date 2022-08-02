@@ -9,6 +9,7 @@ env:
   VERSION_FILE: 0
   VERSION_EPOCH:
   VERSION_FULL:
+
 jobs:
   main_workflow:
     name: Main Workflow
@@ -132,6 +133,7 @@ jobs:
           echo "VERSION_EPOCH=$(date +%s)" >> $GITHUB_ENV
           export epoch="${{ env.VERSION_EPOCH }}"
           echo "TIME_STAMP=$(date -ud @$epoch)" >> $GITHUB_ENV
+          echo ${{ env.TIME_STAMP }}
           echo "VERSION_FULL=${{ env.VERSION_PROGRAM }}.${{ env.VERSION_FILE }}.${{ env.VERSION_EPOCH }}" >> $GITHUB_ENV
       - id: check_and_commit
         name: Commit Changes
