@@ -130,9 +130,7 @@ jobs:
           sed -i "s/\"label\": \".*\"/\"label\": \"Workflow  Stop\"/g" docs/json/workflow_stop_md5.json
           sed -i "s/\"message\": \".*\"/\"message\": \"$(date)\"/g" docs/json/workflow_stop_md5.json
           echo "VERSION_EPOCH=$(date +%s)" >> $GITHUB_ENV
-          epoch="${{ env.VERSION_EPOCH }}"
-          export epoch
-          echo "TIME_STAMP=$(date -ud @${epoch})" >> $GITHUB_ENV
+          export epoch="${{ env.VERSION_EPOCH }}";echo "TIME_STAMP=$(date -ud @${epoch})" >> $GITHUB_ENV
           echo "VERSION_FULL=${{ env.VERSION_PROGRAM }}.${{ env.VERSION_FILE }}.${{ env.VERSION_EPOCH }}" >> $GITHUB_ENV
       - id: check_and_commit
         name: Commit Changes
