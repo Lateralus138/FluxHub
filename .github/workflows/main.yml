@@ -133,12 +133,11 @@ jobs:
           export ts=$(date +%s);t_s="$(date -ud @$ts)"
           echo "VERSION_EPOCH=${ts}" >> $GITHUB_ENV
           echo "TIME_STAMP=${t_s}" >> $GITHUB_ENV
-          echo "VERSION_FULL=${{ env.VERSION_PROGRAM }}.${{ env.VERSION_FILE }}.${{ env.VERSION_EPOCH }}" >> $GITHUB_ENV
       - id: set_vars
-        name: Set Variables
+        name: Set Full Version
         if: steps.check_and_create_main_stop_md5.conclusion == 'success'
         run: |
-          echo "VERSION_EPOCH: [" ${{ env.VERSION_EPOCH }} "]"
+          echo "VERSION_FULL=${{ env.VERSION_PROGRAM }}.${{ env.VERSION_FILE }}.${{ env.VERSION_EPOCH }}" >> $GITHUB_ENV
       - id: check_and_commit
         name: Commit Changes
         if: steps.set_vars.conclusion == 'success'
