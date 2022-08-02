@@ -137,7 +137,7 @@ jobs:
       - id: set_vars
         name: Set Variables
         if: steps.check_and_create_main_stop_md5.conclusion == 'success'
-        run: /
+        run: |
           echo "VERSION_EPOCH: [" ${{ env.VERSION_EPOCH }} "]"
       - id: check_and_commit
         name: Commit Changes
