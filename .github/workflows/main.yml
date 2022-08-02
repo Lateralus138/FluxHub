@@ -2,6 +2,13 @@ name: Main Workflow
 on:
   push:
     branches: [ master ]
+env:
+  TIME_STAMP:
+  VERSION_DATE:
+  VERSION_PROGRAM: 1
+  VERSION_FILE: 0
+  VERSION_EPOCH:
+  VERSION_FULL:
 jobs:
   main_workflow:
     name: Main Workflow
@@ -122,9 +129,14 @@ jobs:
           echo -e "$workflow_init_template" > docs/json/workflow_stop_md5.json
           sed -i "s/\"label\": \".*\"/\"label\": \"Workflow  Stop\"/g" docs/json/workflow_stop_md5.json
           sed -i "s/\"message\": \".*\"/\"message\": \"$(date)\"/g" docs/json/workflow_stop_md5.json
+          echo "VERSION_EPOCH=$(date +%s)" >> $GITHUB_ENV
+          epoch="${{ env.VERSION_EPOCH }}"
+          export epoch
+          echo "TIME_STAMP=$(date -ud @${epoch})" >> $GITHUB_ENV
+          echo "VERSION_FULL=${{ env.VERSION_PROGRAM }}.${{ env.VERSION_FILE }}.${{ env.VERSION_EPOCH }}" >> $GITHUB_ENV
       - id: check_and_commit
         name: Commit Changes
         if: steps.check_and_create_main_stop_md5.conclusion == 'success'
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Completed Main Workflow
+          commit_message: Completed Main Workflow - ${{ env.VERSION_FULL }} @ ${{ env.TIME_STAMP }}
