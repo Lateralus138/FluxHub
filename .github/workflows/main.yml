@@ -130,9 +130,9 @@ jobs:
           echo -e "$workflow_init_template" > docs/json/workflow_stop_md5.json
           sed -i "s/\"label\": \".*\"/\"label\": \"Workflow  Stop\"/g" docs/json/workflow_stop_md5.json
           sed -i "s/\"message\": \".*\"/\"message\": \"$(date)\"/g" docs/json/workflow_stop_md5.json
-          echo "VERSION_EPOCH=$(date +%s)" >> $GITHUB_ENV
-          echo "TIME_STAMP=$(date -ud @${{ env.VERSION_EPOCH }})" >> $GITHUB_ENV
-          echo ${{ env.TIME_STAMP }}
+          export ts=$(date +%s);t_s="$(date -ud @$ts)"
+          echo "VERSION_EPOCH=${ts}" >> $GITHUB_ENV
+          echo "TIME_STAMP=${t_s}" >> $GITHUB_ENV
           echo "VERSION_FULL=${{ env.VERSION_PROGRAM }}.${{ env.VERSION_FILE }}.${{ env.VERSION_EPOCH }}" >> $GITHUB_ENV
       - id: set_vars
         name: Set Variables
