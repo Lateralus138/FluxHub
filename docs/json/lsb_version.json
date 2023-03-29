@@ -2,7 +2,7 @@
 	"schemaVersion": 1,
 	"color": "e3a21a",
 	"label": "Workflow Built On",
-	"message": "Ubuntu 20.04.5 LTS",
+	"message": "Ubuntu 22.04.2 LTS",
 	"labelColor": "1d1d1d",
 	"style": "for-the-badge",
 	"namedLogo": "github"
