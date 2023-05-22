@@ -2,7 +2,7 @@
 	"schemaVersion": 1,
 	"color": "9f00a7",
 	"label": "OS Version",
-	"message": "Linux fv-az618-84 5.15.0-1035-azure #42-Ubuntu SMP Tue Feb 28 19:41:23 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux",
+	"message": "Linux fv-az1131-507 5.15.0-1037-azure #44-Ubuntu SMP Thu Apr 20 13:19:31 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux",
 	"labelColor": "1d1d1d",
 	"style": "for-the-badge",
 	"namedLogo": "github"
